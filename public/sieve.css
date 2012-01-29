@@ -1,0 +1,15 @@
+h1, p, td { font-family: sans-serif; }
+
+h1 { font-size:1.5em; }
+p { margin-left: 15px; }
+
+#primeTable table {
+	border: 2px solid #778899;
+	align:center;
+
+}
+#primeTable td {
+	border: 1px solid #e6e6fa;
+	padding:8px;
+	text-align:center;
+}

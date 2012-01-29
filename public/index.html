@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="sieve.css" />
+	<script type="text/javascript" src="sieve.js"></script>
+	<title>Sieve of Eratosthenes</title>
+</head>
+<body>
+
+<h1>Introduction</h1>
+
+<p>The <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Eratosthenes</a> is an excellent first introduction to the mathematical topic of finding primes. Primes can not be enumerated from a simple formula, so mathematicians have invented efficient ways to test for primality and to search for prime numbers.  The Sieve of Eratosthenes is an instructive example of this. We begin by building a table of integers up to some desired maximum, N. Based on the simple definition that a prime is only divisible by itself and 1, we can iterate over the table of numbers removing all the multiples of the smallest currently known prime (initially 2). Afterwards, the lowest number remaining in the table must be prime. We can then repeat the removal procedure using the last prime number found, revealing the next prime.  The process will quickly remove all the non-prime numbers leaving the table to contain all primes numbers from 1 to N in computation time O(n(log n)(log log n)).
+</p>
+
+<h1>Demo</h1>
+
+<p>The following demo animates the process of sieving for primes over a configurable table size.</p>
+
+<div id="primeButton">
+	<button type="button" onclick="doTableSizeButton()">Change Table Size</button>
+	<button type="button" onclick="doRunButton()">Run Sieve</button>
+	<button type="button" onclick="doStopButton()">Stop Sieve</button>
+</div>
+
+<div id="primeDiv">
+	<script type="text/javascript">
+	document.getElementById("primeDiv").innerHTML=buildTable(config.defaultNumCols, config.defaultN);
+	</script>
+</div>
+
+</body>
+</html>
+
